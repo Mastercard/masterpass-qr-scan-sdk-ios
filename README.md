@@ -44,7 +44,7 @@ This SDK is based on [QRCodeReader.swift][1]
 - Go to your Xcode project's **Build Settings** and set **Always Embed Swift Standard Libraries** to **YES**
 
 [1]: https://github.com/yannickl/QRCodeReader.swift
-[2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/1.0.0/masterpassqrscansdk-framework-ios.zip
+[2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/1.0.1/masterpassqrscansdk-framework-ios.zip
 
 ### Usage
 
@@ -109,8 +109,8 @@ func checkCameraPermission(completion: @escaping () -> Void) {
                 DispatchQueue.main.async {
                     if granted {
                         completion()
-                        strongSelf.showAlert(title: "Error", message: "Camera permissions are required for scanning QR. Please turn on Settings -> MasterpassQR Demo -> Camera")
                     } else {
+                        strongSelf.showAlert(title: "Error", message: "Camera permissions are required for scanning QR. Please turn on Settings -> MasterpassQR Demo -> Camera")
                     }
                 }
             }
@@ -187,6 +187,20 @@ __Objective-C__
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [controller addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil]];
     [self presentViewController:controller animated:true completion:nil];
+}
+
+# pragma mark - QRCodeReaderViewControllerDelegate Methods
+
+- (void)reader:(QRCodeReaderViewController *)reader didScanResult:(QRCodeReaderResult *)result {
+    [reader stopScanning];
+
+    [self dismissViewControllerAnimated:YES completion: nil]
+}
+
+- (void)readerDidCancel:(QRCodeReaderViewController *)reader {
+    [reader stopScanning];
+
+    [self dismissViewControllerAnimated:YES completion: nil]
 }
 ```
 
