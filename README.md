@@ -21,9 +21,9 @@ This SDK is based on [QRCodeReader.swift][1]
 - In your *Podfile* write the following
 
   ```cocoapods
+  use_frameworks!
   pod 'MasterpassQRScanSDK'
   ```
-
 - Do `pod install`
 - Everything is setup now
 
