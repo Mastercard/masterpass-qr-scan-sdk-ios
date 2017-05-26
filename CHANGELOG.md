@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2017-05-25
+- Update for Xcode 8.3.2
+
 ## [1.0.2] - 2017-04-04
 - Set minimum deployment target to iOS 8.
 
