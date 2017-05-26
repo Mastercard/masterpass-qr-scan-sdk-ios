@@ -7,7 +7,7 @@ This SDK provides UI components for QR scanning that allows to modify simple att
 This SDK is based on [QRCodeReader.swift][1]
 
 ### Requirements:
-1. Xcode 8
+1. Xcode 8.3.2
 2. iOS >= 8.0
 
 ### Features:
