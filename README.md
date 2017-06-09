@@ -7,7 +7,7 @@ This SDK provides UI components for QR scanning that allows to modify simple att
 This SDK is based on [QRCodeReader.swift][1]
 
 ### Requirements:
-1. Xcode 8.3.2
+1. Xcode 8
 2. iOS >= 8.0
 
 ### Features:
@@ -24,6 +24,7 @@ This SDK is based on [QRCodeReader.swift][1]
   use_frameworks!
   pod 'MasterpassQRScanSDK'
   ```
+
 - Do `pod install`
 - Everything is setup now
 
@@ -44,7 +45,7 @@ This SDK is based on [QRCodeReader.swift][1]
 - Go to your Xcode project's **Build Settings** and set **Always Embed Swift Standard Libraries** to **YES**
 
 [1]: https://github.com/yannickl/QRCodeReader.swift
-[2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/1.0.3/masterpassqrscansdk-framework-ios.zip
+[2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/1.0.4/masterpassqrscansdk-framework-ios.zip
 
 ### Usage
 

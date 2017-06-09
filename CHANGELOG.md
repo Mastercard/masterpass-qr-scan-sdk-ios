@@ -1,8 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [1.0.3] - 2017-05-25
-- Update for Xcode 8.3.2
+## [1.0.4] - 2017-06-09
+- Fix crash when invalid metadata object types are provided
+- Fix crash when camera permission is denied but the controller was initialized
 
 ## [1.0.2] - 2017-04-04
 - Set minimum deployment target to iOS 8.
