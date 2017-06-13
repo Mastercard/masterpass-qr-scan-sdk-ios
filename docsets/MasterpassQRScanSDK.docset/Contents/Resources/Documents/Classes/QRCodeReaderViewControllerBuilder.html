@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QRCodeReaderViewControllerBuilder Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/QRCodeReaderViewControllerBuilder" class="dashAnchor"></a>
+
+    <a title="QRCodeReaderViewControllerBuilder Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          MasterpassQRScanSDK Docs
+        </a>
+        
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">MasterpassQRScanSDK Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      QRCodeReaderViewControllerBuilder Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReader.html">QRCodeReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderContainer.html">QRCodeReaderContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderResult.html">QRCodeReaderResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderView.html">QRCodeReaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderViewController.html">QRCodeReaderViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderViewControllerBuilder.html">QRCodeReaderViewControllerBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRReaderOverlayView.html">QRReaderOverlayView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/QRCodeReaderDisplayable.html">QRCodeReaderDisplayable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/QRCodeReaderViewControllerDelegate.html">QRCodeReaderViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>QRCodeReaderViewControllerBuilder</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">QRCodeReaderViewControllerBuilder</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>The QRCodeViewControllerBuilder aims to create a simple configuration object for
+the QRCode view controller.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Configuring%20the%20QRCodeViewController%20Objects"></a>
+                <a name="//apple_ref/swift/Section/Configuring the QRCodeViewController Objects" class="dashAnchor"></a>
+                <a href="#/Configuring%20the%20QRCodeViewController%20Objects">
+                  <h3 class="section-name">Configuring the QRCodeViewController Objects</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder38QRCodeReaderViewControllerBuilderBlock"></a>
+                    <a name="//apple_ref/swift/Alias/QRCodeReaderViewControllerBuilderBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder38QRCodeReaderViewControllerBuilderBlock">QRCodeReaderViewControllerBuilderBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The builder block.
+The block gives a reference of builder you can configure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">QRCodeReaderViewControllerBuilderBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">QRCodeReaderViewControllerBuilder</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder17cancelButtonTitleSS"></a>
+                    <a name="//apple_ref/swift/Property/cancelButtonTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder17cancelButtonTitleSS">cancelButtonTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The title to use for the cancel button.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cancelButtonTitle</span> <span class="o">=</span> <span class="s">"Cancel"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder6readerCS_12QRCodeReader"></a>
+                    <a name="//apple_ref/swift/Property/reader" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder6readerCS_12QRCodeReader">reader</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The code reader object used to scan the bar code.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">reader</span> <span class="o">=</span> <span class="kt"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder10readerViewCS_21QRCodeReaderContainer"></a>
+                    <a name="//apple_ref/swift/Property/readerView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder10readerViewCS_21QRCodeReaderContainer">readerView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The reader view used to display the video capture and the UI components.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">readerView</span> <span class="o">=</span> <span class="kt"><a href="../Classes/QRCodeReaderContainer.html">QRCodeReaderContainer</a></span><span class="p">(</span><span class="nv">displayable</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReaderView.html">QRCodeReaderView</a></span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder19startScanningAtLoadSb"></a>
+                    <a name="//apple_ref/swift/Property/startScanningAtLoad" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder19startScanningAtLoadSb">startScanningAtLoad</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag to know whether the view controller start scanning the codes when the view will appear.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">startScanningAtLoad</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder16showCancelButtonSb"></a>
+                    <a name="//apple_ref/swift/Property/showCancelButton" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder16showCancelButtonSb">showCancelButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag to display the cancel button.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">showCancelButton</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder15showTorchButtonSb"></a>
+                    <a name="//apple_ref/swift/Property/showTorchButton" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder15showTorchButtonSb">showTorchButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag to display the toggle torch button. If the value is true and there is no torch the button will not be displayed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">showTorchButton</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder15showOverlayViewSb"></a>
+                    <a name="//apple_ref/swift/Property/showOverlayView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder15showOverlayViewSb">showOverlayView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag to display the guide view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">showOverlayView</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder11overlayViewGSqCSo6UIView_"></a>
+                    <a name="//apple_ref/swift/Property/overlayView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder11overlayViewGSqCSo6UIView_">overlayView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenince property for overlay view</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">overlayView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder14scanRegionSizeVSC6CGSize"></a>
+                    <a name="//apple_ref/swift/Property/scanRegionSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder14scanRegionSizeVSC6CGSize">scanRegionSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Size of region the camera will scan for qr code. It will be centered in the camera preview. If <code>.zero</code> then whole area will be scanneable.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">scanRegionSize</span> <span class="p">:</span> <span class="kt">CGSize</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <a href="#/Initializers">
+                  <h3 class="section-name">Initializers</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuildercFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuildercFT_S0_">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize a QRCodeViewController builder with default values.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuildercFT10buildBlockFS0_T__S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(buildBlock:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC19MasterpassQRScanSDK33QRCodeReaderViewControllerBuildercFT10buildBlockFS0_T__S0_">init(buildBlock:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize a QRCodeReaderViewController builder with default values.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">buildBlock</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReaderViewControllerBuilder.html#/s:C19MasterpassQRScanSDK33QRCodeReaderViewControllerBuilder38QRCodeReaderViewControllerBuilderBlock">QRCodeReaderViewControllerBuilderBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>buildBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A QRCodeReaderViewController builder block to configure itself.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>Copyright ©2016 MasterCard. All rights reserved. Version (1.0.4)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

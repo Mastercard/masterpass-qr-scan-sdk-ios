@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QRCodeReaderViewControllerDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/QRCodeReaderViewControllerDelegate" class="dashAnchor"></a>
+
+    <a title="QRCodeReaderViewControllerDelegate Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          MasterpassQRScanSDK Docs
+        </a>
+        
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">MasterpassQRScanSDK Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      QRCodeReaderViewControllerDelegate Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReader.html">QRCodeReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderContainer.html">QRCodeReaderContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderResult.html">QRCodeReaderResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderView.html">QRCodeReaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderViewController.html">QRCodeReaderViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderViewControllerBuilder.html">QRCodeReaderViewControllerBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRReaderOverlayView.html">QRReaderOverlayView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/QRCodeReaderDisplayable.html">QRCodeReaderDisplayable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/QRCodeReaderViewControllerDelegate.html">QRCodeReaderViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>QRCodeReaderViewControllerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">QRCodeReaderViewControllerDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>This protocol defines delegate methods for objects that implements the <code>QRCodeReaderDelegate</code>. The methods of the protocol allow the delegate to be notified when the reader did scan result and or when the user wants to stop to read some QRCodes.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP19MasterpassQRScanSDK34QRCodeReaderViewControllerDelegate6readerFTCS_26QRCodeReaderViewController13didScanResultCS_18QRCodeReaderResult_T_"></a>
+                    <a name="//apple_ref/swift/Method/reader(_:didScanResult:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP19MasterpassQRScanSDK34QRCodeReaderViewControllerDelegate6readerFTCS_26QRCodeReaderViewController13didScanResultCS_18QRCodeReaderResult_T_">reader(_:didScanResult:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the reader did scan a code.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">reader</span><span class="p">(</span><span class="n">_</span> <span class="nv">reader</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReaderViewController.html">QRCodeReaderViewController</a></span><span class="p">,</span> <span class="n">didScanResult</span> <span class="nv">result</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReaderResult.html">QRCodeReaderResult</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>reader</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A code reader object informing the delegate about the scan result.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the scan</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP19MasterpassQRScanSDK34QRCodeReaderViewControllerDelegate15readerDidCancelFCS_26QRCodeReaderViewControllerT_"></a>
+                    <a name="//apple_ref/swift/Method/readerDidCancel(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP19MasterpassQRScanSDK34QRCodeReaderViewControllerDelegate15readerDidCancelFCS_26QRCodeReaderViewControllerT_">readerDidCancel(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the user wants to stop scanning codes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">readerDidCancel</span><span class="p">(</span><span class="n">_</span> <span class="nv">reader</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReaderViewController.html">QRCodeReaderViewController</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>reader</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A code reader object informing the delegate about the cancellation.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>Copyright ©2016 MasterCard. All rights reserved. Version (1.0.4)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

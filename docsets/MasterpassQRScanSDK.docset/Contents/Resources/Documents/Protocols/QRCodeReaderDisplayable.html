@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QRCodeReaderDisplayable Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/QRCodeReaderDisplayable" class="dashAnchor"></a>
+
+    <a title="QRCodeReaderDisplayable Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          MasterpassQRScanSDK Docs
+        </a>
+        
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">MasterpassQRScanSDK Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      QRCodeReaderDisplayable Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReader.html">QRCodeReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderContainer.html">QRCodeReaderContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderResult.html">QRCodeReaderResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderView.html">QRCodeReaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderViewController.html">QRCodeReaderViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderViewControllerBuilder.html">QRCodeReaderViewControllerBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRReaderOverlayView.html">QRReaderOverlayView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/QRCodeReaderDisplayable.html">QRCodeReaderDisplayable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/QRCodeReaderViewControllerDelegate.html">QRCodeReaderViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>QRCodeReaderDisplayable</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">QRCodeReaderDisplayable</span></code></pre>
+
+                </div>
+              </div>
+            <p>The <code>QRCodeReaderDisplayable</code> procotol that each view embeded a <code><a href="../Classes/QRCodeReaderContainer.html">QRCodeReaderContainer</a></code> must conforms to. It defines the required UI component needed and the mandatory methods.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP19MasterpassQRScanSDK23QRCodeReaderDisplayable10cameraViewCSo6UIView"></a>
+                    <a name="//apple_ref/swift/Property/cameraView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP19MasterpassQRScanSDK23QRCodeReaderDisplayable10cameraViewCSo6UIView">cameraView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The view that display video as it is being captured by the camera.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="k">var</span> <span class="nv">cameraView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP19MasterpassQRScanSDK23QRCodeReaderDisplayable12cancelButtonGSqCSo8UIButton_"></a>
+                    <a name="//apple_ref/swift/Property/cancelButton" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP19MasterpassQRScanSDK23QRCodeReaderDisplayable12cancelButtonGSqCSo8UIButton_">cancelButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A cancel button.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="k">var</span> <span class="nv">cancelButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP19MasterpassQRScanSDK23QRCodeReaderDisplayable17toggleTorchButtonGSqCSo8UIButton_"></a>
+                    <a name="//apple_ref/swift/Property/toggleTorchButton" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP19MasterpassQRScanSDK23QRCodeReaderDisplayable17toggleTorchButtonGSqCSo8UIButton_">toggleTorchButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A toggle torch button.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="k">var</span> <span class="nv">toggleTorchButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP19MasterpassQRScanSDK23QRCodeReaderDisplayable11overlayViewGSqCSo6UIView_"></a>
+                    <a name="//apple_ref/swift/Property/overlayView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP19MasterpassQRScanSDK23QRCodeReaderDisplayable11overlayViewGSqCSo6UIView_">overlayView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A guide view upon the camera view</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="k">var</span> <span class="nv">overlayView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP19MasterpassQRScanSDK23QRCodeReaderDisplayable15setupComponentsFT16showCancelButtonSb15showTorchButtonSb15showOverlayViewSb_T_"></a>
+                    <a name="//apple_ref/swift/Method/setupComponents(showCancelButton:showTorchButton:showOverlayView:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP19MasterpassQRScanSDK23QRCodeReaderDisplayable15setupComponentsFT16showCancelButtonSb15showTorchButtonSb15showOverlayViewSb_T_">setupComponents(showCancelButton:showTorchButton:showOverlayView:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method called by the container to allows you to layout your view properly using the given flags.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter showCancelButton: Flag to know whether you should display the cancel button.
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter showTorchButton: Flag to know whether you should display the toggle torch button.
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter showOverlayView: Flag to know whether you should display the overlayView or not.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">setupComponents</span><span class="p">(</span><span class="nv">showCancelButton</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">showTorchButton</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">showOverlayView</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>showCancelButton</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flag to know whether you should display the cancel button.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>showTorchButton</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flag to know whether you should display the toggle torch button.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>showOverlayView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flag to know whether you should display the overlayView or not.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>Copyright ©2016 MasterCard. All rights reserved. Version (1.0.4)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

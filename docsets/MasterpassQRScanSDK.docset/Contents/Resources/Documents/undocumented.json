@@ -1,0 +1,103 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRCodeReader.swift",
+      "line": 373,
+      "symbol": "QRCodeReader.captureOutput(_:didOutputMetadataObjects:from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRCodeReaderViewController.swift",
+      "line": 86,
+      "symbol": "QRCodeReaderViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRCodeReaderViewController.swift",
+      "line": 97,
+      "symbol": "QRCodeReaderViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRCodeReaderViewController.swift",
+      "line": 123,
+      "symbol": "QRCodeReaderViewController.supportedInterfaceOrientations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRCodeReaderViewController.swift",
+      "line": 127,
+      "symbol": "QRCodeReaderViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRCodeReaderViewController.swift",
+      "line": 135,
+      "symbol": "QRCodeReaderViewController.viewWillDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRCodeReaderViewController.swift",
+      "line": 141,
+      "symbol": "QRCodeReaderViewController.viewWillLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRCodeReaderViewController.swift",
+      "line": 147,
+      "symbol": "QRCodeReaderViewController.viewDidLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRCodeReaderViewController.swift",
+      "line": 166,
+      "symbol": "QRCodeReaderViewController.viewWillTransition(to:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRReaderOverlayView.swift",
+      "line": 51,
+      "symbol": "QRReaderOverlayView.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRReaderOverlayView.swift",
+      "line": 57,
+      "symbol": "QRReaderOverlayView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRReaderOverlayView.swift",
+      "line": 64,
+      "symbol": "QRReaderOverlayView.sizeThatFits(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRReaderOverlayView.swift",
+      "line": 68,
+      "symbol": "QRReaderOverlayView.intrinsicContentSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk/MasterpassQRScanSDK/QRReaderOverlayView.swift",
+      "line": 72,
+      "symbol": "QRReaderOverlayView.draw(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/muhammad/Documents/Mastercard/masterpass-qr/MasterpassQR Demo/scansdk"
+}
