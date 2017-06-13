@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 2017-06-13
+- Fix cocoapods podspec with documentation url
+
 ## [1.0.4] - 2017-06-09
 - Fix crash when invalid metadata object types are provided
 - Fix crash when camera permission is denied but the controller was initialized
