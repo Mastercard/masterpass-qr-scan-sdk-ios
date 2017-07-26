@@ -7,7 +7,7 @@ This SDK provides UI components for QR scanning that allows to modify simple att
 This SDK is based on [QRCodeReader.swift][1]
 
 ### Requirements:
-1. Xcode 8
+1. Xcode 9.0.0
 2. iOS >= 8.0
 
 ### Features:
@@ -45,7 +45,7 @@ This SDK is based on [QRCodeReader.swift][1]
 - Go to your Xcode project's **Build Settings** and set **Always Embed Swift Standard Libraries** to **YES**
 
 [1]: https://github.com/yannickl/QRCodeReader.swift
-[2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/1.0.5/masterpassqrscansdk-framework-ios.zip
+[2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/1.0.6-beta/masterpassqrscansdk-framework-ios.zip
 
 ### Usage
 
@@ -90,33 +90,33 @@ import MasterpassQRScanSDK
 
 // Check camera permissions
 func checkCameraPermission(completion: @escaping () -> Void) {
-        let cameraMediaType = AVMediaTypeVideo
-        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: cameraMediaType)
+    let cameraMediaType = AVMediaType.video
+    let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: cameraMediaType)
 
-        switch cameraAuthorizationStatus {
-        case .denied:
-            showAlert(title: "Error", message: "Camera permissions are required for scanning QR. Please turn on Settings -> MasterpassQR Demo -> Camera")
-            break
-        case .restricted:
-            showAlert(title: "Error", message: "Camera permissions are restricted for scanning QR")
-            break
-        case .authorized:
-            completion()
-        case .notDetermined:
-            // Prompting user for the permission to use the camera.
-            AVCaptureDevice.requestAccess(forMediaType: cameraMediaType) { [weak self] granted in
-                guard let strongSelf = self else { return }
+    switch cameraAuthorizationStatus {
+    case .denied:
+        showAlert(title: "Error", message: "Camera permissions are required for scanning QR. Please turn on Settings -> MasterpassQR Demo -> Camera")
+        break
+    case .restricted:
+        showAlert(title: "Error", message: "Camera permissions are restricted for scanning QR")
+        break
+    case .authorized:
+        completion()
+    case .notDetermined:
+        // Prompting user for the permission to use the camera.
+        AVCaptureDevice.requestAccess(for: cameraMediaType) { [weak self] granted in
+            guard let strongSelf = self else { return }
 
-                DispatchQueue.main.async {
-                    if granted {
-                        completion()
-                    } else {
-                        strongSelf.showAlert(title: "Error", message: "Camera permissions are required for scanning QR. Please turn on Settings -> MasterpassQR Demo -> Camera")
-                    }
+            DispatchQueue.main.async {
+                if granted {
+                    completion()
+                } else {
+                    strongSelf.showAlert(title: "Error", message: "Camera permissions are required for scanning QR. Please turn on Settings -> MasterpassQR Demo -> Camera")
                 }
             }
         }
     }
+}
 
 // MARK: - QRCodeReaderViewController Delegate Methods
 
