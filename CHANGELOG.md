@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.6-beta2] - 2017-09-20
+- Update for Xcode 9.0.0 GM
+
 ## [1.0.6-beta] - 2017-07-26
 - Update for Xcode 9.0.0-beta3 and Swift 4.0
 
