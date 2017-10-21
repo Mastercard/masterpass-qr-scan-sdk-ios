@@ -26,8 +26,9 @@ This SDK is based on [QRCodeReader.swift][1]
   ```
 
 - Do `pod install`
-- Everything is setup now
 - For Objective-C: go to your Xcode project's **Build Settings** and set **Always Embed Swift Standard Libraries** to **YES**
+- Everything is setup now
+
 
 #### Manual
 ##### Swift
@@ -196,13 +197,13 @@ __Objective-C__
 - (void)reader:(QRCodeReaderViewController *)reader didScanResult:(QRCodeReaderResult *)result {
     [reader stopScanning];
 
-    [self dismissViewControllerAnimated:YES completion: nil]
+    [self dismissViewControllerAnimated:YES completion: nil];
 }
 
 - (void)readerDidCancel:(QRCodeReaderViewController *)reader {
     [reader stopScanning];
 
-    [self dismissViewControllerAnimated:YES completion: nil]
+    [self dismissViewControllerAnimated:YES completion: nil];
 }
 ```
 
