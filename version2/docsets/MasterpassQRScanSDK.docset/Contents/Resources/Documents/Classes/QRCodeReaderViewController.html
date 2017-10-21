@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QRCodeReaderViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Class/QRCodeReaderViewController" class="dashAnchor"></a>
+
+    <a title="QRCodeReaderViewController Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          MasterpassQRScanSDK Docs
+        </a>
+        
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">MasterpassQRScanSDK Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      QRCodeReaderViewController Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCameraSwitchButton.html">QRCameraSwitchButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReader.html">QRCodeReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderView.html">QRCodeReaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderViewController.html">QRCodeReaderViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderViewControllerBuilder.html">QRCodeReaderViewControllerBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRCodeReaderViewOverlay.html">QRCodeReaderViewOverlay</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/QRToggleTorchButton.html">QRToggleTorchButton</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/QRCodeReaderDelegate.html">QRCodeReaderDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>QRCodeReaderViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">QRCodeReaderViewController</span> <span class="p">:</span> <span class="nc">UIViewController</span></code></pre>
+
+                </div>
+              </div>
+            <p>Convenient controller to display a view to scan/read 1D or 2D bar codes like
+the QRCodes. It is based on the <code>AVFoundation</code> framework from Apple. It aims
+to replace ZXing or ZBar for iOS 7 and over.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/To%20be%20overriden%20to%20create%20custom%20view%20controller"></a>
+                <a name="//apple_ref/objc/Section/To be overriden to create custom view controller" class="dashAnchor"></a>
+                <a href="#/To%20be%20overriden%20to%20create%20custom%20view%20controller">
+                  <h3 class="section-name">To be overriden to create custom view controller</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(py)cameraView"></a>
+                    <a name="//apple_ref/objc/Property/cameraView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(py)cameraView">cameraView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Captured area by the camera</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/QRCodeReaderView.html">QRCodeReaderView</a></span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">cameraView</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">cameraView</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReaderView.html">QRCodeReaderView</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(py)switchCameraButton"></a>
+                    <a name="//apple_ref/objc/Property/switchCameraButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(py)switchCameraButton">switchCameraButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Button to toggle back-front camera</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIButton</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">switchCameraButton</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">switchCameraButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(py)toggleTorchButton"></a>
+                    <a name="//apple_ref/objc/Property/toggleTorchButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(py)toggleTorchButton">toggleTorchButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Button to on-off torch or flash</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIButton</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">toggleTorchButton</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">toggleTorchButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(py)cancelButton"></a>
+                    <a name="//apple_ref/objc/Property/cancelButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(py)cancelButton">cancelButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Button to close the view controller</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIButton</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">cancelButton</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">cancelButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(py)startScanningAtLoad"></a>
+                    <a name="//apple_ref/objc/Property/startScanningAtLoad" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(py)startScanningAtLoad">startScanningAtLoad</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag to know whether the view controller start scanning the codes when the view will appear.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">startScanningAtLoad</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">startScanningAtLoad</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(py)scanRegionSize"></a>
+                    <a name="//apple_ref/objc/Property/scanRegionSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(py)scanRegionSize">scanRegionSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Size of region the camera will scan for qr code. It will be centered in the camera preview. If <code>.zero</code> then whole area will be scanneable.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGSize</span> <span class="n">scanRegionSize</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">scanRegionSize</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(py)showSwitchCameraButton"></a>
+                    <a name="//apple_ref/objc/Property/showSwitchCameraButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(py)showSwitchCameraButton">showSwitchCameraButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag to display the switch camera back-front button.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">showSwitchCameraButton</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">showSwitchCameraButton</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(py)showTorchButton"></a>
+                    <a name="//apple_ref/objc/Property/showTorchButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(py)showTorchButton">showTorchButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag to display the toggle torch button. If the value is true and there is no torch the button will not be displayed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">showTorchButton</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">showTorchButton</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(py)showCancelButton"></a>
+                    <a name="//apple_ref/objc/Property/showCancelButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(py)showCancelButton">showCancelButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag to display the cancel button.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">showCancelButton</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">showCancelButton</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(py)showOverlayView"></a>
+                    <a name="//apple_ref/objc/Property/showOverlayView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(py)showOverlayView">showOverlayView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag to display the guide view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">showOverlayView</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">showOverlayView</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)cancelAction:"></a>
+                    <a name="//apple_ref/objc/Method/-cancelAction:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)cancelAction:">-cancelAction:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Action correcpond to cancel button</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">cancelAction</span><span class="p">:(</span><span class="n">UIButton</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">button</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">cancelAction</span><span class="p">(</span><span class="n">_</span> <span class="nv">button</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)switchCameraAction:"></a>
+                    <a name="//apple_ref/objc/Method/-switchCameraAction:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)switchCameraAction:">-switchCameraAction:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Action correcpond to switch camera button</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">switchCameraAction</span><span class="p">:(</span><span class="n">UIButton</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">button</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">switchCameraAction</span><span class="p">(</span><span class="n">_</span> <span class="nv">button</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)toggleTorchAction:"></a>
+                    <a name="//apple_ref/objc/Method/-toggleTorchAction:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)toggleTorchAction:">-toggleTorchAction:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Action correcpond to toggle torch button</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">toggleTorchAction</span><span class="p">:(</span><span class="n">UIButton</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">button</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">toggleTorchAction</span><span class="p">(</span><span class="n">_</span> <span class="nv">button</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)setupUIComponentsWithCancelButtonTitle:cameraView:"></a>
+                    <a name="//apple_ref/objc/Method/-setupUIComponentsWithCancelButtonTitle:cameraView:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)setupUIComponentsWithCancelButtonTitle:cameraView:">-setupUIComponentsWithCancelButtonTitle:cameraView:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Function to create all necessary UI, and modify its property:</p>
+
+<ul>
+<li>cameraView, overlay</li>
+<li>cancelButton</li>
+<li>toggleTorchButton</li>
+<li>switchCameraButton</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="nf">setupUIComponentsWithCancelButtonTitle</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">cancelButtonTitle</span>
+                            <span class="nf">cameraView</span><span class="p">:(</span><span class="n"><a href="../Classes/QRCodeReaderView.html">QRCodeReaderView</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">cameraView</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">setupUIComponents</span><span class="p">(</span><span class="n">withCancelButtonTitle</span> <span class="nv">cancelButtonTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">cameraView</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReaderView.html">QRCodeReaderView</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)setupAutoLayoutConstraints"></a>
+                    <a name="//apple_ref/objc/Method/-setupAutoLayoutConstraints" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)setupAutoLayoutConstraints">-setupAutoLayoutConstraints</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Function to create auto-layout for the UI:</p>
+
+<ul>
+<li>cameraView, overlay</li>
+<li>cancelButton</li>
+<li>toggleTorchButton</li>
+<li>switchCameraButton</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">setupAutoLayoutConstraints</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">setupAutoLayoutConstraints</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Creating%20and%20Inializing%20QRCode%20Reader%20Controllers"></a>
+                <a name="//apple_ref/objc/Section/Creating and Inializing QRCode Reader Controllers" class="dashAnchor"></a>
+                <a href="#/Creating%20and%20Inializing%20QRCode%20Reader%20Controllers">
+                  <h3 class="section-name">Creating and Inializing QRCode Reader Controllers</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)initWithCancelButtonTitle:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithCancelButtonTitle:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)initWithCancelButtonTitle:">-initWithCancelButtonTitle:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Initializes a view controller to read QRCodes from a displayed
+video preview and a cancel button to be go back.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Discussion: This convenient method is used to instanciate a reader with
+only one supported metadata object types: the QRCode.
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    initWithCancelButtonTitle:metadataObjectTypes:
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nf">initWithCancelButtonTitle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">cancelTitle</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n">cancelButtonTitle</span> <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancelTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The title of the cancel button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(cm)readerWithCancelButtonTitle:"></a>
+                    <a name="//apple_ref/objc/Method/+readerWithCancelButtonTitle:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(cm)readerWithCancelButtonTitle:">+readerWithCancelButtonTitle:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Creates a view controller to read QRCodes from a displayed
+video preview and a cancel button to be go back.
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    initWithCancelButtonTitle:
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">readerWithCancelButtonTitle</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">cancelTitle</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">reader</span><span class="p">(</span><span class="n">withCancelButtonTitle</span> <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancelTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The title of the cancel button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)initWithMetadataObjectTypes:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithMetadataObjectTypes:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)initWithMetadataObjectTypes:">-initWithMetadataObjectTypes:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Initializes a reader view controller with a list of metadata
+object types.
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    initWithCancelButtonTitle:metadataObjectTypes:
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 3.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nf">initWithMetadataObjectTypes</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">metadataObjectTypes</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">metadataObjectTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>metadataObjectTypes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of strings identifying the types of
+metadata objects to process.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(cm)readerWithMetadataObjectTypes:"></a>
+                    <a name="//apple_ref/objc/Method/+readerWithMetadataObjectTypes:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(cm)readerWithMetadataObjectTypes:">+readerWithMetadataObjectTypes:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Creates a reader view controller with a list of metadata object
+types.
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    initWithMetadataObjectTypes:
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 3.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">readerWithMetadataObjectTypes</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">metadataObjectTypes</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">reader</span><span class="p">(</span><span class="n">withMetadataObjectTypes</span> <span class="nv">metadataObjectTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>metadataObjectTypes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of strings identifying the types of
+metadata objects to process.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)initWithCancelButtonTitle:metadataObjectTypes:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithCancelButtonTitle:metadataObjectTypes:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)initWithCancelButtonTitle:metadataObjectTypes:">-initWithCancelButtonTitle:metadataObjectTypes:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Initializes a view controller to read wanted metadata object
+types from a displayed video preview and a cancel button to be go back.
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    initWithCancelButtonTitle:codeReader:
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 2.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nf">initWithCancelButtonTitle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">cancelTitle</span>
+                    <span class="nf">metadataObjectTypes</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">metadataObjectTypes</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n">cancelButtonTitle</span> <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">metadataObjectTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancelTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The title of the cancel button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>metadataObjectTypes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type (“symbology”) of barcode to scan.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(cm)readerWithCancelButtonTitle:metadataObjectTypes:"></a>
+                    <a name="//apple_ref/objc/Method/+readerWithCancelButtonTitle:metadataObjectTypes:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(cm)readerWithCancelButtonTitle:metadataObjectTypes:">+readerWithCancelButtonTitle:metadataObjectTypes:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Creates a view controller to read wanted metadata object types
+from a displayed video preview and a cancel button to be go back.
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    initWithCancelButtonTitle:metadataObjectTypes:
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 2.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+<span class="nf">readerWithCancelButtonTitle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">cancelTitle</span>
+        <span class="nf">metadataObjectTypes</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">metadataObjectTypes</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">reader</span><span class="p">(</span><span class="n">withCancelButtonTitle</span> <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">metadataObjectTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancelTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The title of the cancel button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>metadataObjectTypes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type (“symbology”) of barcode to scan.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)initWithCancelButtonTitle:codeReader:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithCancelButtonTitle:codeReader:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)initWithCancelButtonTitle:codeReader:">-initWithCancelButtonTitle:codeReader:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Initializes a view controller using a cancel button title and
+a code reader.
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    initWithCancelButtonTitle:codeReader:startScanningAtLoad:
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 3.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nf">initWithCancelButtonTitle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">cancelTitle</span>
+                             <span class="nf">codeReader</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">codeReader</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n">cancelButtonTitle</span> <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">codeReader</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancelTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The title of the cancel button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>codeReader</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The reader to decode the codes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(cm)readerWithCancelButtonTitle:codeReader:"></a>
+                    <a name="//apple_ref/objc/Method/+readerWithCancelButtonTitle:codeReader:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(cm)readerWithCancelButtonTitle:codeReader:">+readerWithCancelButtonTitle:codeReader:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Initializes a view controller using a cancel button title and
+a code reader.
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    initWithCancelButtonTitle:codeReader:
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 3.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+<span class="nf">readerWithCancelButtonTitle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">cancelTitle</span>
+                 <span class="nf">codeReader</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">codeReader</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">reader</span><span class="p">(</span><span class="n">withCancelButtonTitle</span> <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">codeReader</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancelTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The title of the cancel button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>codeReader</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The reader to decode the codes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)initWithCancelButtonTitle:codeReader:startScanningAtLoad:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithCancelButtonTitle:codeReader:startScanningAtLoad:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)initWithCancelButtonTitle:codeReader:startScanningAtLoad:">-initWithCancelButtonTitle:codeReader:startScanningAtLoad:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Initializes a view controller using a cancel button title and
+a code reader.
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    initWithCancelButtonTitle:codeReader:
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 3.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nf">initWithCancelButtonTitle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">cancelTitle</span>
+                             <span class="nf">codeReader</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">codeReader</span>
+                    <span class="nf">startScanningAtLoad</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">startScanningAtLoad</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n">cancelButtonTitle</span> <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">codeReader</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span><span class="p">,</span> <span class="nv">startScanningAtLoad</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancelTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The title of the cancel button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>codeReader</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The reader to decode the codes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>startScanningAtLoad</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flag to know whether the view controller start
+scanning the codes when the view will appear.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(cm)readerWithCancelButtonTitle:codeReader:startScanningAtLoad:"></a>
+                    <a name="//apple_ref/objc/Method/+readerWithCancelButtonTitle:codeReader:startScanningAtLoad:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(cm)readerWithCancelButtonTitle:codeReader:startScanningAtLoad:">+readerWithCancelButtonTitle:codeReader:startScanningAtLoad:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Initializes a view controller using a cancel button title and
+a code reader.
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    initWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 3.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+<span class="nf">readerWithCancelButtonTitle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">cancelTitle</span>
+                 <span class="nf">codeReader</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">codeReader</span>
+        <span class="nf">startScanningAtLoad</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">startScanningAtLoad</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">reader</span><span class="p">(</span><span class="n">withCancelButtonTitle</span> <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">codeReader</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span><span class="p">,</span> <span class="nv">startScanningAtLoad</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancelTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The title of the cancel button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>codeReader</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The reader to decode the codes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>startScanningAtLoad</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flag to know whether the view controller start
+scanning the codes when the view will appear.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)initWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)initWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:">-initWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Initializes a view controller using a cancel button title and
+a code reader.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 4.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nf">initWithCancelButtonTitle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">cancelTitle</span>
+                             <span class="nf">codeReader</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">codeReader</span>
+                    <span class="nf">startScanningAtLoad</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">startScanningAtLoad</span>
+                 <span class="nf">showSwitchCameraButton</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">showSwitchCameraButton</span>
+                        <span class="nf">showTorchButton</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">showTorchButton</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n">cancelButtonTitle</span> <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">codeReader</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span><span class="p">,</span> <span class="nv">startScanningAtLoad</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">showSwitchCameraButton</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">showTorchButton</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancelTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The title of the cancel button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>codeReader</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The reader to decode the codes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>startScanningAtLoad</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flag to know whether the view controller start
+scanning the codes when the view will appear.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>showSwitchCameraButton</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flag to display the switch camera button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>showTorchButton</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flag to know whether the view controller start
+scanning the codes when the view will appear.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(cm)readerWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:"></a>
+                    <a name="//apple_ref/objc/Method/+readerWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(cm)readerWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:">+readerWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Initializes a view controller using a cancel button title and
+a code reader.
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    initWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 4.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+<span class="nf">readerWithCancelButtonTitle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">cancelTitle</span>
+                 <span class="nf">codeReader</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">codeReader</span>
+        <span class="nf">startScanningAtLoad</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">startScanningAtLoad</span>
+     <span class="nf">showSwitchCameraButton</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">showSwitchCameraButton</span>
+            <span class="nf">showTorchButton</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">showTorchButton</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">reader</span><span class="p">(</span><span class="n">withCancelButtonTitle</span> <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">codeReader</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span><span class="p">,</span> <span class="nv">startScanningAtLoad</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">showSwitchCameraButton</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">showTorchButton</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancelTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The title of the cancel button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>codeReader</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The reader to decode the codes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>startScanningAtLoad</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flag to know whether the view controller start
+scanning the codes when the view will appear.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>showSwitchCameraButton</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flag to display the switch camera button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>showTorchButton</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flag to know whether the view controller start
+scanning the codes when the view will appear.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)initWithBuilder:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithBuilder:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)initWithBuilder:">-initWithBuilder:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize view controller using builder</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nf">initWithBuilder</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/QRCodeReaderViewControllerBuilder.html">QRCodeReaderViewControllerBuilder</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">builder</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">builder</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReaderViewControllerBuilder.html">QRCodeReaderViewControllerBuilder</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>builder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The builder that contain configuration of this view controller.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(cm)readerWithBuilderBlock:"></a>
+                    <a name="//apple_ref/objc/Method/+readerWithBuilderBlock:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(cm)readerWithBuilderBlock:">+readerWithBuilderBlock:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize view controller using builder block, user can modify the configuration inside the builder block.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">readerWithBuilderBlock</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">QRCodeReaderViewControllerBuilderBlock</span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">reader</span><span class="p">(</span><span class="n">builderBlock</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">QRCodeReaderViewControllerBuilderBlock</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The builder that contain configuration of this view controller</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Controlling%20the%20Reader"></a>
+                <a name="//apple_ref/objc/Section/Controlling the Reader" class="dashAnchor"></a>
+                <a href="#/Controlling%20the%20Reader">
+                  <h3 class="section-name">Controlling the Reader</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)startScanning"></a>
+                    <a name="//apple_ref/objc/Method/-startScanning" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)startScanning">-startScanning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Starts scanning the codes.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 3.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startScanning</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startScanning</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)stopScanning"></a>
+                    <a name="//apple_ref/objc/Method/-stopScanning" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)stopScanning">-stopScanning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Stops scanning the codes.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 3.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopScanning</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopScanning</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Managing%20the%20Delegate"></a>
+                <a name="//apple_ref/objc/Section/Managing the Delegate" class="dashAnchor"></a>
+                <a href="#/Managing%20the%20Delegate">
+                  <h3 class="section-name">Managing the Delegate</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(py)delegate"></a>
+                    <a name="//apple_ref/objc/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(py)delegate">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: The object that acts as the delegate of the receiving QRCode
+reader.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 1.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/QRCodeReaderDelegate.html">QRCodeReaderDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span> <span class="n">delegate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/QRCodeReaderDelegate.html">QRCodeReaderDelegate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(im)setCompletionWithBlock:"></a>
+                    <a name="//apple_ref/objc/Method/-setCompletionWithBlock:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(im)setCompletionWithBlock:">-setCompletionWithBlock:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: Sets the completion with a block that executes when a QRCode
+or when the user did stopped the scan.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 1.0.1
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setCompletionWithBlock</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nullable</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">setCompletionWith</span><span class="p">(</span><span class="n">_</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="p">((</span><span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to be executed. This block has no
+return value and takes one argument: the <code>resultAsString</code>. If the user
+stop the scan and that there is no response the <code>resultAsString</code> argument
+is nil.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Managing%20the%20Reader"></a>
+                <a name="//apple_ref/objc/Section/Managing the Reader" class="dashAnchor"></a>
+                <a href="#/Managing%20the%20Reader">
+                  <h3 class="section-name">Managing the Reader</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)QRCodeReaderViewController(py)codeReader"></a>
+                    <a name="//apple_ref/objc/Property/codeReader" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)QRCodeReaderViewController(py)codeReader">codeReader</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Abstract: The default code reader created with the controller.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    since 3.0.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">codeReader</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">codeReader</span><span class="p">:</span> <span class="kt"><a href="../Classes/QRCodeReader.html">QRCodeReader</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>Copyright ©2016 MasterCard. All rights reserved. Version (2.0.0)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

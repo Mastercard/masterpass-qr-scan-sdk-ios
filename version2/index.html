@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MasterpassQRScanSDK  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="MasterpassQRScanSDK  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          MasterpassQRScanSDK Docs
+        </a>
+        
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">MasterpassQRScanSDK Reference</a>
+      <img class="carat" src="img/carat.png" />
+      MasterpassQRScanSDK  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/QRCameraSwitchButton.html">QRCameraSwitchButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/QRCodeReader.html">QRCodeReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/QRCodeReaderView.html">QRCodeReaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/QRCodeReaderViewController.html">QRCodeReaderViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/QRCodeReaderViewControllerBuilder.html">QRCodeReaderViewControllerBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/QRCodeReaderViewOverlay.html">QRCodeReaderViewOverlay</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/QRToggleTorchButton.html">QRToggleTorchButton</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/QRCodeReaderDelegate.html">QRCodeReaderDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='masterpass-qr-scan-sdk' class='heading'>Masterpass QR Scan SDK</h1>
+
+<p>This SDK provides UI components for QR scanning that allows to modify simple attributes of the views or use custom views for display.</p>
+
+<p><em>This SDK is developed in Objective-C and it works with Swift.</em></p>
+
+<p>This SDK is based on <a href="https://github.com/yannickl/QRCodeReaderViewController">QRCodeReaderViewController</a></p>
+<h3 id='requirements' class='heading'>Requirements:</h3>
+
+<ol>
+<li>Xcode 9.0.0+</li>
+<li>iOS 8.0+</li>
+</ol>
+<h3 id='features' class='heading'>Features:</h3>
+
+<ol>
+<li>Simple interface for QR scanning UI customization</li>
+<li>Easily extendible by using custom UI</li>
+<li>Scanning features for both portrait and landscape mode</li>
+</ol>
+<h3 id='installation' class='heading'>Installation</h3>
+<h4 id='cocoapods' class='heading'>Cocoapods</h4>
+
+<ul>
+<li>In your <em>Podfile</em> write the following</li>
+</ul>
+<pre class="highlight plaintext"><code>  use_frameworks!
+  pod 'MasterpassQRScanSDK'
+</code></pre>
+
+<ul>
+<li>Do <code>pod install</code></li>
+<li>Everything is setup now</li>
+</ul>
+<h4 id='manual' class='heading'>Manual</h4>
+<h5 id='swift' class='heading'>Swift</h5>
+
+<ul>
+<li>Download the latest release of <a href="https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/2.0.0/masterpassqrscansdk-framework-ios.zip">Masterpass QR Scan SDK</a>.</li>
+<li>Unzip the file.</li>
+<li>Go to your Xcode project’s “General” settings. Drag MasterpassQRScanSDK.framework to the “Embedded Binaries” section. Make sure to select <strong>Copy items if needed</strong> and click Finish.</li>
+<li><p>Create a new <strong>Run Script Phase</strong> in your app’s target’s <strong>Build Phases</strong> and paste the following snippet in the script text field:</p>
+
+<p><code>bash &quot;${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/MasterpassQRScanSDK.framework/strip-frameworks.sh&quot;</code></p></li>
+</ul>
+
+<p>This step is required to work around an App Store submission bug when archiving universal binaries.</p>
+<h5 id='objc' class='heading'>Objc</h5>
+
+<ul>
+<li>Follow same instructions as Swift</li>
+</ul>
+<h3 id='usage' class='heading'>Usage</h3>
+
+<p>In iOS10+, you will need first provide a reasoning about the camera use. For that you&rsquo;ll need to add the <strong>Privacy - Camera Usage Description</strong> <em>(NSCameraUsageDescription)</em> field in your Info.plist</p>
+<h4 id='simple' class='heading'>Simple</h4>
+
+<ol>
+<li>Check camera permissions. Make sure the use of camera is authorised.</li>
+<li>Create and configure <code>QRReaderViewControllerBuilder</code> instance.</li>
+<li>Create a <code>QRReaderViewController</code> with <code>QRReaderViewControllerBuilder</code> instance.</li>
+<li>Set the delegate of <code>QRReaderViewController</code> instance.</li>
+<li>The data also can be read using block/closure</li>
+<li>Present the controller.</li>
+</ol>
+
+<p><em>Note that you should check whether the device supports the reader library by using the <code>QRCodeReader.isAvailable()</code> and the <code>QRCodeReader.supportsQRCode()</code> methods.</em></p>
+
+<p><strong>Swift</strong></p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">MasterpassQRScanSDK</span>
+<span class="kd">import</span> <span class="kt">AVFoundation</span>
+
+<span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">scanWithOriginalTheme</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">guard</span> <span class="kt">QRCodeReader</span><span class="o">.</span><span class="nf">isAvailable</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="kt">QRCodeReader</span><span class="o">.</span><span class="nf">supportsQRCode</span><span class="p">()</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span>
+    <span class="p">}</span>
+    <span class="c1">// Presents the readerVC</span>
+    <span class="n">checkCameraPermission</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span>
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">strongSelf</span> <span class="o">=</span> <span class="k">self</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+
+        <span class="k">var</span> <span class="nv">reader</span><span class="p">:</span><span class="kt">QRCodeReader</span><span class="p">?</span>
+
+        <span class="k">let</span> <span class="nv">qrVC</span> <span class="o">=</span> <span class="kt">QRCodeReaderViewController</span><span class="p">(</span><span class="nv">builder</span><span class="p">:</span> <span class="kt">QRCodeReaderViewControllerBuilder</span> <span class="p">{</span>
+            <span class="nv">$0</span><span class="o">.</span><span class="n">startScanningAtLoad</span> <span class="o">=</span> <span class="kc">false</span>
+            <span class="n">reader</span> <span class="o">=</span> <span class="nv">$0</span><span class="o">.</span><span class="n">reader</span>
+        <span class="p">})</span>
+
+        <span class="c1">//block to read the result</span>
+        <span class="n">reader</span><span class="p">?</span><span class="o">.</span><span class="nf">setCompletionWith</span><span class="p">({</span> <span class="n">result</span> <span class="k">in</span>
+            <span class="n">reader</span><span class="p">?</span><span class="o">.</span><span class="nf">stopScanning</span><span class="p">()</span>
+            <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">scanResult</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">result</span><span class="p">;</span>
+            <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="p">})</span>
+
+        <span class="c1">//block when cancel is pressed</span>
+        <span class="n">qrVC</span><span class="o">.</span><span class="nf">setCompletionWith</span><span class="p">({</span> <span class="n">result</span> <span class="k">in</span>
+            <span class="n">reader</span><span class="p">?</span><span class="o">.</span><span class="nf">stopScanning</span><span class="p">()</span>
+            <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="p">})</span>
+
+        <span class="c1">// Retrieve the QRCode content via delegate</span>
+        <span class="n">qrVC</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+
+        <span class="n">strongSelf</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">qrVC</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">qrVC</span><span class="o">.</span><span class="nf">startScanning</span><span class="p">()</span>
+        <span class="p">})</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Check camera permissions</span>
+<span class="kd">func</span> <span class="nf">checkCameraPermission</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">cameraMediaType</span> <span class="o">=</span> <span class="kt">AVMediaType</span><span class="o">.</span><span class="n">video</span>
+    <span class="k">let</span> <span class="nv">cameraAuthorizationStatus</span> <span class="o">=</span> <span class="kt">AVCaptureDevice</span><span class="o">.</span><span class="nf">authorizationStatus</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">cameraMediaType</span><span class="p">)</span>
+
+    <span class="k">switch</span> <span class="n">cameraAuthorizationStatus</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nv">denied</span><span class="p">:</span>
+        <span class="nf">showAlert</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Error"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Camera permissions are required for scanning QR. Please turn on Settings -&gt; MasterpassQR Demo -&gt; Camera"</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nv">restricted</span><span class="p">:</span>
+        <span class="nf">showAlert</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Error"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Camera permissions are restricted for scanning QR"</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nv">authorized</span><span class="p">:</span>
+        <span class="nf">completion</span><span class="p">()</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nv">notDetermined</span><span class="p">:</span>
+        <span class="c1">// Prompting user for the permission to use the camera.</span>
+        <span class="kt">AVCaptureDevice</span><span class="o">.</span><span class="nf">requestAccess</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">cameraMediaType</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">granted</span> <span class="k">in</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">strongSelf</span> <span class="o">=</span> <span class="k">self</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+
+            <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="n">granted</span> <span class="p">{</span>
+                    <span class="nf">completion</span><span class="p">()</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">strongSelf</span><span class="o">.</span><span class="nf">showAlert</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Error"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Camera permissions are required for scanning QR. Please turn on Settings -&gt; MasterpassQR Demo -&gt; Camera"</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">showAlert</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">alert</span> <span class="o">=</span> <span class="kt">UIAlertController</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="n">message</span><span class="p">,</span> <span class="nv">preferredStyle</span><span class="p">:</span> <span class="o">.</span><span class="n">alert</span><span class="p">)</span>
+    <span class="n">alert</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="kt">UIAlertAction</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Ok"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">cancel</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">))</span>
+    <span class="nf">present</span><span class="p">(</span><span class="n">alert</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// MARK: - QRCodeReaderViewController Delegate Methods</span>
+<span class="kd">func</span> <span class="nf">reader</span><span class="p">(</span><span class="n">_</span> <span class="nv">reader</span><span class="p">:</span> <span class="kt">QRCodeReaderViewController</span><span class="p">,</span> <span class="n">didScanResult</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">reader</span><span class="o">.</span><span class="nf">stopScanning</span><span class="p">()</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">scanResult</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">result</span><span class="p">;</span>
+    <span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">readerDidCancel</span><span class="p">(</span><span class="n">_</span> <span class="nv">reader</span><span class="p">:</span> <span class="kt">QRCodeReaderViewController</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">reader</span><span class="o">.</span><span class="nf">stopScanning</span><span class="p">()</span>
+    <span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>Objective-C</strong></p>
+<pre class="highlight objective_c"><code><span class="k">@import</span> <span class="n">MasterpassQRScanSDK</span><span class="p">;</span>
+<span class="k">@import</span> <span class="n">AVFoundation</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">IBAction</span><span class="p">)</span><span class="nf">scanAction</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">[</span><span class="n">QRCodeReader</span> <span class="nf">isAvailable</span><span class="p">]</span> <span class="o">||</span> <span class="o">!</span><span class="p">[</span><span class="n">QRCodeReader</span> <span class="nf">supportsQRCode</span><span class="p">])</span> <span class="p">{</span>
+      <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">__weak</span> <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">weakSelf</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+  <span class="p">[</span><span class="n">self</span> <span class="nf">checkCameraPermission</span><span class="p">:</span> <span class="o">^</span><span class="p">{</span>
+
+      <span class="n">__block</span> <span class="n">__weak</span> <span class="n">QRCodeReader</span><span class="o">*</span> <span class="n">reader</span><span class="p">;</span>
+      <span class="n">QRCodeReaderViewController</span><span class="o">*</span> <span class="n">qrVC</span> <span class="o">=</span> <span class="p">[</span><span class="n">QRCodeReaderViewController</span> <span class="nf">readerWithBuilderBlock</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">QRCodeReaderViewControllerBuilder</span> <span class="o">*</span><span class="n">builder</span><span class="p">){</span>
+          <span class="n">reader</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">reader</span><span class="p">;</span>
+      <span class="p">}];</span>
+
+      <span class="c1">//block to read the result
+</span>      <span class="p">[</span><span class="n">reader</span> <span class="nf">setCompletionWithBlock</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">result</span><span class="p">)</span> <span class="p">{</span>
+          <span class="p">[</span><span class="n">reader</span> <span class="nf">stopScanning</span><span class="p">];</span>
+          <span class="p">[</span><span class="n">self</span> <span class="nf">dismissViewControllerAnimated</span><span class="p">:</span><span class="nb">YES</span> <span class="nf">completion</span><span class="p">:</span> <span class="nb">nil</span><span class="p">];</span>
+          <span class="n">self</span><span class="p">.</span><span class="n">scanResult</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">result</span><span class="p">;</span>
+      <span class="p">}];</span>
+
+      <span class="c1">//block when cancel is pressed
+</span>      <span class="p">[</span><span class="n">qrVC</span> <span class="nf">setCompletionWithBlock</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">result</span><span class="p">)</span> <span class="p">{</span>
+          <span class="p">[</span><span class="n">reader</span> <span class="nf">stopScanning</span><span class="p">];</span>
+          <span class="p">[</span><span class="n">self</span> <span class="nf">dismissViewControllerAnimated</span><span class="p">:</span><span class="nb">YES</span> <span class="nf">completion</span><span class="p">:</span> <span class="nb">nil</span><span class="p">];</span>
+      <span class="p">}];</span>
+
+      <span class="c1">// Retrieve the QRCode content via delegate
+</span>      <span class="n">qrVC</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="n">weakSelf</span><span class="p">;</span>
+
+      <span class="p">[</span><span class="n">weakSelf</span> <span class="nf">presentViewController</span><span class="p">:</span><span class="n">qrVC</span> <span class="nf">animated</span><span class="p">:</span><span class="nb">true</span> <span class="n">completion</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+  <span class="p">}];</span>
+<span class="p">}</span>
+
+<span class="c1">// Check camera permissions
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">checkCameraPermission</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">completion</span> <span class="p">{</span>
+    <span class="n">AVAuthorizationStatus</span> <span class="n">status</span> <span class="o">=</span> <span class="p">[</span><span class="n">AVCaptureDevice</span> <span class="nf">authorizationStatusForMediaType</span><span class="p">:</span><span class="n">AVMediaTypeVideo</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">AVAuthorizationStatusDenied</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">[</span><span class="n">self</span> <span class="nf">showAlertWithTitle</span><span class="p">:</span><span class="s">@"Error"</span> <span class="nf">message</span><span class="p">:</span> <span class="s">@"Camera permissions are required for scanning QR. Please turn on Settings -&gt; MasterpassQR Demo -&gt; Camera"</span><span class="p">];</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">AVAuthorizationStatusRestricted</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">[</span><span class="n">self</span> <span class="nf">showAlertWithTitle</span><span class="p">:</span><span class="s">@"Error"</span> <span class="nf">message</span><span class="p">:</span> <span class="s">@"Camera permissions are restricted for scanning QR"</span><span class="p">];</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">AVAuthorizationStatusAuthorized</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">completion</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">AVAuthorizationStatusNotDetermined</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">__weak</span> <span class="n">__typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">weakSelf</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+        <span class="p">[</span><span class="n">AVCaptureDevice</span> <span class="nf">requestAccessForMediaType</span><span class="p">:</span><span class="n">AVMediaTypeVideo</span> <span class="nf">completionHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">BOOL</span> <span class="n">granted</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">dispatch_async</span><span class="p">(</span><span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">granted</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">completion</span><span class="p">();</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="p">[</span><span class="n">weakSelf</span> <span class="nf">showAlertWithTitle</span><span class="p">:</span><span class="s">@"Error"</span> <span class="nf">message</span><span class="p">:</span> <span class="s">@"Camera permissions are required for scanning QR. Please turn on Settings -&gt; MasterpassQR Demo -&gt; Camera"</span><span class="p">];</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+        <span class="p">}];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">showAlertWithTitle</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">title</span> <span class="nf">message</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">message</span> <span class="p">{</span>
+    <span class="n">UIAlertController</span> <span class="o">*</span><span class="n">controller</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIAlertController</span> <span class="nf">alertControllerWithTitle</span><span class="p">:</span><span class="n">title</span> <span class="nf">message</span><span class="p">:</span><span class="n">message</span> <span class="n">preferredStyle</span><span class="o">:</span><span class="n">UIAlertControllerStyleAlert</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">controller</span> <span class="nf">addAction</span><span class="p">:[</span><span class="n">UIAlertAction</span> <span class="nf">actionWithTitle</span><span class="p">:</span><span class="s">@"Ok"</span> <span class="nf">style</span><span class="p">:</span><span class="n">UIAlertActionStyleCancel</span> <span class="nf">handler</span><span class="p">:</span><span class="nb">nil</span><span class="p">]];</span>
+    <span class="p">[</span><span class="n">self</span> <span class="nf">presentViewController</span><span class="p">:</span><span class="n">controller</span> <span class="nf">animated</span><span class="p">:</span><span class="nb">true</span> <span class="n">completion</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="cp"># pragma mark - QRCodeReaderViewControllerDelegate Methods
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">reader</span><span class="p">:(</span><span class="n">QRCodeReaderViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">reader</span> <span class="nf">didScanResult</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">result</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">reader</span> <span class="nf">stopScanning</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">self</span> <span class="nf">dismissViewControllerAnimated</span><span class="p">:</span><span class="nb">YES</span> <span class="nf">completion</span><span class="p">:</span> <span class="nb">nil</span><span class="p">];</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">scanResult</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">readerDidCancel</span><span class="p">:(</span><span class="n">QRCodeReaderViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">reader</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">reader</span> <span class="nf">stopScanning</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">self</span> <span class="nf">dismissViewControllerAnimated</span><span class="p">:</span><span class="nb">YES</span> <span class="nf">completion</span><span class="p">:</span> <span class="nb">nil</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre>
+<h4 id='advanced' class='heading'>Advanced</h4>
+<h5 id='custom-view-controller' class='heading'>Custom View Controller</h5>
+
+<p>Using custom view controller with <code>QRReaderViewController</code> embedded as child view controller.</p>
+
+<p><strong>Swift</strong></p>
+<pre class="highlight swift"><code>
+<span class="kd">import</span> <span class="kt">MasterpassQRScanSDK</span>
+
+<span class="kd">class</span> <span class="kt">CustomViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">QRCodeReaderDelegate</span> <span class="p">{</span>
+
+  <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">reader</span><span class="p">:</span> <span class="kt">QRCodeReaderViewController</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kt">QRCodeReaderViewController</span><span class="p">(</span><span class="nv">builder</span><span class="p">:</span> <span class="kt">QRCodeReaderViewControllerBuilder</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">readerView</span> <span class="o">=</span> <span class="nv">$0</span><span class="o">.</span><span class="n">readerView</span>
+
+        <span class="c1">// Setup overlay view</span>
+        <span class="k">let</span> <span class="nv">overlayView</span> <span class="o">=</span> <span class="n">readerView</span><span class="o">.</span><span class="nf">getOverlay</span><span class="p">()</span>
+        <span class="n">overlayView</span><span class="o">.</span><span class="n">cornerColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">purple</span>
+        <span class="n">overlayView</span><span class="o">.</span><span class="n">cornerWidth</span> <span class="o">=</span> <span class="mi">6</span>
+        <span class="n">overlayView</span><span class="o">.</span><span class="n">cornerLength</span> <span class="o">=</span> <span class="mi">75</span>
+        <span class="n">overlayView</span><span class="o">.</span><span class="n">indicatorSize</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">250</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">250</span><span class="p">)</span>
+
+        <span class="c1">// Setup scanning region</span>
+        <span class="nv">$0</span><span class="o">.</span><span class="n">scanRegionSize</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">250</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">250</span><span class="p">)</span>
+
+        <span class="c1">// Hide torch button provided by the default view</span>
+        <span class="nv">$0</span><span class="o">.</span><span class="n">showTorchButton</span> <span class="o">=</span> <span class="kc">false</span>
+
+        <span class="c1">// Hide cancel button provided by the default view</span>
+        <span class="nv">$0</span><span class="o">.</span><span class="n">showCancelButton</span> <span class="o">=</span> <span class="kc">false</span>
+
+        <span class="c1">// Don't start scanning when this view is loaded i.e initialized</span>
+        <span class="nv">$0</span><span class="o">.</span><span class="n">startScanningAtLoad</span> <span class="o">=</span> <span class="kc">false</span>
+
+        <span class="nv">$0</span><span class="o">.</span><span class="n">showSwitchCameraButton</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+    <span class="p">})</span>
+  <span class="p">}()</span>
+
+  <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+      <span class="n">reader</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+
+      <span class="k">self</span><span class="o">.</span><span class="nf">addChildViewController</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>
+      <span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">insertSubview</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">view</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+
+      <span class="k">let</span> <span class="nv">viewDict</span> <span class="o">=</span> <span class="p">[</span><span class="s">"reader"</span> <span class="p">:</span> <span class="n">reader</span><span class="o">.</span><span class="n">view</span> <span class="k">as</span> <span class="kt">Any</span><span class="p">]</span>
+      <span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">addConstraints</span><span class="p">(</span><span class="kt">NSLayoutConstraint</span><span class="o">.</span><span class="nf">constraints</span><span class="p">(</span><span class="nv">withVisualFormat</span><span class="p">:</span> <span class="s">"H:|[reader]|"</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[],</span> <span class="nv">metrics</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">views</span><span class="p">:</span> <span class="n">viewDict</span><span class="p">))</span>
+      <span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">addConstraints</span><span class="p">(</span><span class="kt">NSLayoutConstraint</span><span class="o">.</span><span class="nf">constraints</span><span class="p">(</span><span class="nv">withVisualFormat</span><span class="p">:</span> <span class="s">"V:|[reader]|"</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[],</span> <span class="nv">metrics</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">views</span><span class="p">:</span> <span class="n">viewDict</span><span class="p">))</span>
+
+      <span class="n">reader</span><span class="o">.</span><span class="nf">didMove</span><span class="p">(</span><span class="nv">toParentViewController</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">super</span><span class="o">.</span><span class="nf">viewDidAppear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+      <span class="n">reader</span><span class="o">.</span><span class="nf">startScanning</span><span class="p">()</span>
+  <span class="p">}</span>
+
+  <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">super</span><span class="o">.</span><span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+      <span class="n">reader</span><span class="o">.</span><span class="nf">stopScanning</span><span class="p">()</span>
+  <span class="p">}</span>
+
+  <span class="c1">// MARK:- Actions</span>
+  <span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">toggleTorch</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">reader</span><span class="o">.</span><span class="n">codeReader</span><span class="o">!.</span><span class="nf">toggleTorch</span><span class="p">()</span>
+  <span class="p">}</span>
+
+  <span class="kd">func</span> <span class="nf">reader</span><span class="p">(</span><span class="n">_</span> <span class="nv">reader</span><span class="p">:</span> <span class="kt">QRCodeReaderViewController</span><span class="p">,</span> <span class="n">didScanResult</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">reader</span><span class="o">.</span><span class="nf">stopScanning</span><span class="p">()</span>
+  <span class="p">}</span>
+
+  <span class="kd">func</span> <span class="nf">readerDidCancel</span><span class="p">(</span><span class="n">_</span> <span class="nv">reader</span><span class="p">:</span> <span class="kt">QRCodeReaderViewController</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">reader</span><span class="o">.</span><span class="nf">stopScanning</span><span class="p">()</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>Objective-C</strong></p>
+<pre class="highlight objective_c"><code><span class="k">@import</span> <span class="n">MasterpassQRScanSDK</span><span class="p">;</span>
+
+<span class="k">@interface</span> <span class="nc">CustomViewController</span> <span class="p">()</span> <span class="o">&lt;</span><span class="n">QRCodeReaderDelegate</span><span class="o">&gt;</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">QRCodeReaderViewController</span> <span class="o">*</span><span class="n">qrVC</span><span class="p">;</span>
+
+<span class="k">@end</span>
+
+<span class="k">@implementation</span> <span class="nc">CustomViewController</span>
+
+<span class="k">@implementation</span> <span class="nc">CustomViewController</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">super</span> <span class="nf">viewDidLoad</span><span class="p">];</span>
+
+    <span class="n">QRCodeReaderViewControllerBuilder</span> <span class="o">*</span><span class="n">builder</span> <span class="o">=</span> <span class="p">[[</span><span class="n">QRCodeReaderViewControllerBuilder</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
+    <span class="n">QRCodeReaderView</span> <span class="o">*</span><span class="n">readerView</span> <span class="o">=</span> <span class="p">(</span><span class="n">QRCodeReaderView</span> <span class="o">*</span><span class="p">)</span> <span class="n">builder</span><span class="p">.</span><span class="n">readerView</span><span class="p">;</span>
+
+    <span class="c1">// Setup overlay view
+</span>    <span class="n">QRCodeReaderViewOverlay</span> <span class="o">*</span><span class="n">overlayView</span> <span class="o">=</span> <span class="p">(</span><span class="n">QRCodeReaderViewOverlay</span> <span class="o">*</span><span class="p">)[</span><span class="n">readerView</span> <span class="nf">getOverlay</span><span class="p">];</span>
+    <span class="n">overlayView</span><span class="p">.</span><span class="n">cornerColor</span> <span class="o">=</span> <span class="n">UIColor</span><span class="p">.</span><span class="n">purpleColor</span><span class="p">;</span>
+    <span class="n">overlayView</span><span class="p">.</span><span class="n">cornerWidth</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+    <span class="n">overlayView</span><span class="p">.</span><span class="n">cornerLength</span> <span class="o">=</span> <span class="mi">75</span><span class="p">;</span>
+    <span class="n">overlayView</span><span class="p">.</span><span class="n">indicatorSize</span> <span class="o">=</span> <span class="n">CGSizeMake</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">);</span>
+
+    <span class="c1">// Setup scanning region
+</span>    <span class="n">builder</span><span class="p">.</span><span class="n">scanRegionSize</span> <span class="o">=</span> <span class="n">CGSizeMake</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">);</span>
+
+    <span class="c1">// Hide torch button provided by default view
+</span>    <span class="n">builder</span><span class="p">.</span><span class="n">showTorchButton</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+    <span class="c1">// Hide cancel button provided by default view
+</span>    <span class="n">builder</span><span class="p">.</span><span class="n">showCancelButton</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+    <span class="c1">// Don't start scanning when this view is loaded i.e initialized
+</span>    <span class="n">builder</span><span class="p">.</span><span class="n">startScanningAtLoad</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+    <span class="n">builder</span><span class="p">.</span><span class="n">showSwitchCameraButton</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+    <span class="n">self</span><span class="p">.</span><span class="n">qrVC</span> <span class="o">=</span> <span class="p">[[</span><span class="n">QRCodeReaderViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithBuilder</span><span class="p">:</span><span class="n">builder</span><span class="p">];</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">qrVC</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+
+    <span class="c1">// Add the reader as child view controller
+</span>    <span class="p">[</span><span class="n">self</span> <span class="nf">addChildViewController</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">qrVC</span><span class="p">];</span>
+
+    <span class="c1">// Add reader view to the bottom
+</span>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nf">insertSubview</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">qrVC</span><span class="p">.</span><span class="n">view</span> <span class="nf">atIndex</span><span class="p">:</span> <span class="mi">0</span><span class="p">];</span>
+
+    <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">dictionary</span> <span class="o">=</span> <span class="p">@{</span><span class="s">@"qrVC"</span><span class="o">:</span> <span class="n">self</span><span class="p">.</span><span class="n">qrVC</span><span class="p">.</span><span class="n">view</span><span class="p">};</span>
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nf">addConstraints</span><span class="p">:[</span><span class="n">NSLayoutConstraint</span> <span class="nf">constraintsWithVisualFormat</span><span class="p">:</span><span class="s">@"H:|[qrVC]|"</span> <span class="nf">options</span><span class="p">:</span><span class="mi">0</span> <span class="nf">metrics</span><span class="p">:</span><span class="nb">nil</span> <span class="n">views</span><span class="o">:</span><span class="n">dictionary</span><span class="p">]];</span>
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nf">addConstraints</span><span class="p">:[</span><span class="n">NSLayoutConstraint</span> <span class="nf">constraintsWithVisualFormat</span><span class="p">:</span><span class="s">@"V:|[qrVC]|"</span> <span class="nf">options</span><span class="p">:</span><span class="mi">0</span> <span class="nf">metrics</span><span class="p">:</span><span class="nb">nil</span> <span class="n">views</span><span class="o">:</span><span class="n">dictionary</span><span class="p">]];</span>
+
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">qrVC</span> <span class="nf">didMoveToParentViewController</span><span class="p">:</span><span class="n">self</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidAppear</span><span class="o">:</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">animated</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">super</span> <span class="nf">viewDidAppear</span><span class="p">:</span><span class="n">animated</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">qrVC</span> <span class="nf">startScanning</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewWillDisappear</span><span class="o">:</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">animated</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">super</span> <span class="nf">viewDidDisappear</span><span class="p">:</span><span class="n">animated</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">qrVC</span> <span class="nf">stopScanning</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="cp">#pragma mark - Actions
+</span><span class="o">-</span> <span class="p">(</span><span class="n">IBAction</span><span class="p">)</span><span class="n">torchButtonPressed</span><span class="o">:</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">sender</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">qrVC</span><span class="p">.</span><span class="n">codeReader</span> <span class="nf">toggleTorch</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="cp">#pragma mark - QRCodeReaderViewControllerDelegate methods
+</span><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">reader</span><span class="o">:</span><span class="p">(</span><span class="n">QRCodeReaderViewController</span> <span class="o">*</span><span class="p">)</span><span class="n">reader</span> <span class="n">didScanResult</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">result</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">reader</span> <span class="nf">stopScanning</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">readerDidCancel</span><span class="o">:</span><span class="p">(</span><span class="n">QRCodeReaderViewController</span> <span class="o">*</span><span class="p">)</span><span class="n">reader</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">reader</span> <span class="nf">stopScanning</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre>
+<h5 id='subclass-of-qrcodereaderviewcontroller' class='heading'>Subclass of QRCodeReaderViewController</h5>
+
+<p>You can subclass the QRCodeReaderViewController to create your own looks and feel, placement of the component of the class. You can modify the following component:</p>
+
+<ul>
+<li>cameraView</li>
+<li>cancelButton</li>
+<li>switchCameraButton</li>
+<li>toggleTorchButton</li>
+</ul>
+
+<p><strong>Swift</strong></p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">UIKit</span>
+<span class="kd">import</span> <span class="kt">MasterpassQRScanSDK</span>
+
+<span class="kd">class</span> <span class="kt">QRCodeReaderViewControllerSubClass</span><span class="p">:</span> <span class="kt">QRCodeReaderViewController</span> <span class="p">{</span>
+
+    <span class="c1">//Mark: - Overriden</span>
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">setupUIComponents</span><span class="p">(</span><span class="n">withCancelButtonTitle</span> <span class="nv">cancelButtonTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">cameraView</span><span class="p">:</span> <span class="kt">QRCodeReaderView</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">cameraView</span> <span class="o">=</span> <span class="n">cameraView</span> <span class="p">{</span>
+            <span class="k">self</span><span class="o">.</span><span class="n">cameraView</span> <span class="o">=</span> <span class="n">cameraView</span><span class="p">;</span>
+        <span class="p">}</span><span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">self</span><span class="o">.</span><span class="n">cameraView</span> <span class="o">=</span> <span class="kt">QRCodeReaderView</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="k">self</span><span class="o">.</span><span class="n">cameraView</span><span class="o">!</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">setupAutoLayoutConstraints</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">views</span> <span class="o">=</span> <span class="p">[</span><span class="s">"cameraView"</span><span class="p">:</span><span class="k">self</span><span class="o">.</span><span class="n">cameraView</span><span class="o">!</span><span class="p">]</span>
+        <span class="n">view</span><span class="o">.</span><span class="nf">addConstraints</span><span class="p">(</span><span class="kt">NSLayoutConstraint</span><span class="o">.</span><span class="nf">constraints</span><span class="p">(</span><span class="nv">withVisualFormat</span><span class="p">:</span> <span class="s">"V:|-50-[cameraView]-50-|"</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">NSLayoutFormatOptions</span><span class="p">(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="mi">0</span><span class="p">),</span> <span class="nv">metrics</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">views</span><span class="p">:</span> <span class="n">views</span><span class="p">))</span>
+        <span class="n">view</span><span class="o">.</span><span class="nf">addConstraints</span><span class="p">(</span><span class="kt">NSLayoutConstraint</span><span class="o">.</span><span class="nf">constraints</span><span class="p">(</span><span class="nv">withVisualFormat</span><span class="p">:</span> <span class="s">"H:|-50-[cameraView]-50-|"</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">NSLayoutFormatOptions</span><span class="p">(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="mi">0</span><span class="p">),</span> <span class="nv">metrics</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">views</span><span class="p">:</span> <span class="n">views</span><span class="p">))</span>
+
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>Objective-C</strong></p>
+<pre class="highlight objective_c"><code><span class="cp">#import &lt;MasterpassQRScanSDK/MasterpassQRScanSDK.h&gt;
+</span>
+<span class="k">@interface</span> <span class="nc">QRCodeReaderViewControllerSubClass</span> <span class="p">:</span> <span class="nc">QRCodeReaderViewController</span>
+<span class="k">@end</span>
+
+<span class="k">@implementation</span> <span class="nc">QRCodeReaderViewControllerSubClass</span>
+
+<span class="cp">#pragma mark - Overriden
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setupUIComponentsWithCancelButtonTitle</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">cancelButtonTitle</span> <span class="nf">cameraView</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">QRCodeReaderView</span><span class="o">*</span><span class="p">)</span> <span class="n">cameraView</span>
+<span class="p">{</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">cameraView</span> <span class="o">=</span> <span class="n">cameraView</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">self</span><span class="p">.</span><span class="n">cameraView</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">cameraView</span>                                       <span class="o">=</span> <span class="p">[[</span><span class="n">QRCodeReaderView</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">cameraView</span><span class="p">.</span><span class="n">translatesAutoresizingMaskIntoConstraints</span> <span class="o">=</span> <span class="nb">NO</span><span class="p">;</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">cameraView</span><span class="p">.</span><span class="n">clipsToBounds</span>                             <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nf">addSubview</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">cameraView</span><span class="p">];</span>
+
+    <span class="c1">//setup other components
+</span>
+<span class="p">}</span>
+
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">setupAutoLayoutConstraints</span>
+<span class="p">{</span>
+    <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">views</span> <span class="o">=</span> <span class="p">@{</span> <span class="s">@"cameraView"</span> <span class="o">:</span> <span class="n">self</span><span class="p">.</span><span class="n">cameraView</span><span class="p">};</span>
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nf">addConstraints</span><span class="p">:</span>
+     <span class="p">[</span><span class="n">NSLayoutConstraint</span> <span class="nf">constraintsWithVisualFormat</span><span class="p">:</span><span class="s">@"V:|-50-[cameraView]-50-|"</span> <span class="nf">options</span><span class="p">:</span><span class="mi">0</span> <span class="nf">metrics</span><span class="p">:</span><span class="nb">nil</span> <span class="n">views</span><span class="o">:</span><span class="n">views</span><span class="p">]];</span>
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nf">addConstraints</span><span class="p">:</span>
+     <span class="p">[</span><span class="n">NSLayoutConstraint</span> <span class="nf">constraintsWithVisualFormat</span><span class="p">:</span><span class="s">@"H:|-50-[cameraView]-50-|"</span> <span class="nf">options</span><span class="p">:</span><span class="mi">0</span> <span class="nf">metrics</span><span class="p">:</span><span class="nb">nil</span> <span class="n">views</span><span class="o">:</span><span class="n">views</span><span class="p">]];</span>
+
+     <span class="c1">//setup other components
+</span><span class="p">}</span>
+
+<span class="k">@end</span>
+</code></pre>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>Copyright ©2016 MasterCard. All rights reserved. Version (2.0.0)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

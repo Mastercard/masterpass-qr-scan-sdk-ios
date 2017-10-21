@@ -1,0 +1,26 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/amri/Desktop/Development/Gitlab/Version2/mpqr_scanner_test_swift/scansdk/MasterpassQRScanSDK/QRCodeReaderViewControllerBuilder.h",
+      "line": 17,
+      "symbol": "QRCodeReaderViewControllerBuilderBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "MasterpassQRScanSDK/MasterpassQRScanSDK.h",
+      "line": 12,
+      "symbol": "MasterpassQRScanSDKVersionNumber",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "MasterpassQRScanSDK/MasterpassQRScanSDK.h",
+      "line": 15,
+      "symbol": "MasterpassQRScanSDKVersionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/amri/Desktop/Development/Gitlab/Version2/mpqr_scanner_test_swift/scansdk"
+}
