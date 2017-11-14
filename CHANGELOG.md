@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+
+## 2.0.1
+- Change license
+
 ## 2.0.0
 - Code use Objective-C instead of Swift
 

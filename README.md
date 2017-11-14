@@ -45,7 +45,7 @@ This SDK is based on [QRCodeReaderViewController][1]
 - Follow same instructions as Swift
 
 [1]: https://github.com/yannickl/QRCodeReaderViewController
-[2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/2.0.0/masterpassqrscansdk-framework-ios.zip
+[2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/2.0.1/masterpassqrscansdk-framework-ios.zip
 
 ### Usage
 
