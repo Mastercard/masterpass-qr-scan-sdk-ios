@@ -22,7 +22,7 @@ This SDK is based on [QRCodeReader.swift][1]
 
   ```cocoapods
   use_frameworks!
-  pod 'MasterpassQRScanSDK', '~> 1.0.7'
+  pod 'MasterpassQRScanSDK', '~> 1.0.8'
   ```
 
 - Do `pod install`
@@ -47,7 +47,7 @@ This SDK is based on [QRCodeReader.swift][1]
 - Go to your Xcode project's **Build Settings** and set **Always Embed Swift Standard Libraries** to **YES**
 
 [1]: https://github.com/yannickl/QRCodeReader.swift
-[2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/1.0.7/masterpassqrscansdk-framework-ios.zip
+[2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/1.0.8/masterpassqrscansdk-framework-ios.zip
 
 ### Usage
 
@@ -66,6 +66,7 @@ __Swift__
 
 ```swift
 import MasterpassQRScanSDK
+import AVFoundation
 
 @IBAction func scanAction(_ sender: AnyObject) {
     guard QRCodeReader.isAvailable() && QRCodeReader.supportsQRCode() else {
@@ -120,20 +121,24 @@ func checkCameraPermission(completion: @escaping () -> Void) {
     }
 }
 
+func showAlert(title: String, message: String) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+    present(alert, animated: true, completion: nil)
+}
+
 // MARK: - QRCodeReaderViewController Delegate Methods
 
-func reader(_ reader: QRCodeReader, didScanResult result: QRCodeReaderResult) {
+func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
     reader.stopScanning()
-
-    // Use QR code result
 
     dismiss(animated: true, completion: nil)
 }
 
-func readerDidCancel(_ reader: QRCodeReader) {
+func readerDidCancel(_ reader: QRCodeReaderViewController) {
     reader.stopScanning()
 
-    dismiss(animated: true, completion: nil)
+    dismiss(animated: false, completion: nil)
 }
 ```
 
@@ -141,6 +146,7 @@ __Objective-C__
 
 ```objc
 @import MasterpassQRScanSDK;
+@import AVFoundation;
 
 - (IBAction)scanAction:(id)sender {
   if (![QRCodeReader isAvailable] || ![QRCodeReader supportsQRCode]) {
