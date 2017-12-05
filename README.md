@@ -15,6 +15,9 @@ This SDK is based on [QRCodeReaderViewController][1]
 2. Easily extendible by using custom UI
 3. Scanning features for both portrait and landscape mode
 
+### Documentation
+The code documentation can be found on [Masterpass QR Scan SDK Docs][3].
+
 ### Installation
 
 #### Cocoapods
@@ -46,6 +49,7 @@ This SDK is based on [QRCodeReaderViewController][1]
 
 [1]: https://github.com/yannickl/QRCodeReaderViewController
 [2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/2.0.1/masterpassqrscansdk-framework-ios.zip
+[3]: https://mastercard.github.io/masterpass-qr-scan-sdk-ios
 
 ### Usage
 
