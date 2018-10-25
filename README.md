@@ -1,4 +1,4 @@
-# Masterpass QR Scan SDK
+# MP QR Scan SDK
 
 This SDK provides UI components for QR scanning that allows to modify simple attributes of the views or use custom views for display.
 
@@ -15,9 +15,6 @@ This SDK is based on [QRCodeReaderViewController][1]
 2. Easily extendible by using custom UI
 3. Scanning features for both portrait and landscape mode
 
-### Documentation
-The code documentation can be found on [Masterpass QR Scan SDK Docs][3].
-
 ### Installation
 
 #### Cocoapods
@@ -25,7 +22,7 @@ The code documentation can be found on [Masterpass QR Scan SDK Docs][3].
 
   ```cocoapods
   use_frameworks!
-  pod 'MasterpassQRScanSDK'
+  pod 'MPQRScanSDK'
   ```
 
 - Do `pod install`
@@ -34,12 +31,12 @@ The code documentation can be found on [Masterpass QR Scan SDK Docs][3].
 
 #### Manual
 ##### Swift
-- Download the latest release of [Masterpass QR Scan SDK][2].
+- Download the latest release of [MP QR Scan SDK][2].
 - Unzip the file.
-- Go to your Xcode project’s “General” settings. Drag MasterpassQRScanSDK.framework to the “Embedded Binaries” section. Make sure to select **Copy items if needed** and click Finish.
+- Go to your Xcode project’s “General” settings. Drag MPQRScanSDK.framework to the “Embedded Binaries” section. Make sure to select **Copy items if needed** and click Finish.
 - Create a new **Run Script Phase** in your app’s target’s **Build Phases** and paste the following snippet in the script text field:
 
-	`bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/MasterpassQRScanSDK.framework/strip-frameworks.sh"`
+	`bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/MPQRScanSDK.framework/strip-frameworks.sh"`
 
   This step is required to work around an App Store submission bug when archiving universal binaries.
 
@@ -48,8 +45,7 @@ The code documentation can be found on [Masterpass QR Scan SDK Docs][3].
 - Follow same instructions as Swift
 
 [1]: https://github.com/yannickl/QRCodeReaderViewController
-[2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/2.0.1/masterpassqrscansdk-framework-ios.zip
-[3]: https://mastercard.github.io/masterpass-qr-scan-sdk-ios
+[2]: https://www.github.com/Mastercard/masterpass-qr-scan-sdk-ios/releases/download/2.0.3/MPQRScansdk-framework-ios.zip
 
 ### Usage
 
@@ -68,7 +64,7 @@ In iOS10+, you will need first provide a reasoning about the camera use. For tha
 __Swift__
 
 ```swift
-import MasterpassQRScanSDK
+import MPQRScanSDK
 import AVFoundation
 
 @IBAction func scanWithOriginalTheme(_ sender: Any) {
@@ -116,7 +112,7 @@ func checkCameraPermission(completion: @escaping () -> Void) {
 
     switch cameraAuthorizationStatus {
     case .denied:
-        showAlert(title: "Error", message: "Camera permissions are required for scanning QR. Please turn on Settings -> MasterpassQR Demo -> Camera")
+        showAlert(title: "Error", message: "Camera permissions are required for scanning QR. Please turn on Settings -> MPQR Demo -> Camera")
         break
     case .restricted:
         showAlert(title: "Error", message: "Camera permissions are restricted for scanning QR")
@@ -132,7 +128,7 @@ func checkCameraPermission(completion: @escaping () -> Void) {
                 if granted {
                     completion()
                 } else {
-                    strongSelf.showAlert(title: "Error", message: "Camera permissions are required for scanning QR. Please turn on Settings -> MasterpassQR Demo -> Camera")
+                    strongSelf.showAlert(title: "Error", message: "Camera permissions are required for scanning QR. Please turn on Settings -> MPQR Demo -> Camera")
                 }
             }
         }
@@ -160,7 +156,7 @@ func readerDidCancel(_ reader: QRCodeReaderViewController) {
 __Objective-C__
 
 ```objc
-@import MasterpassQRScanSDK;
+@import MPQRScanSDK;
 @import AVFoundation;
 
 - (IBAction)scanAction:(id)sender {
@@ -198,7 +194,7 @@ __Objective-C__
 - (void)checkCameraPermission:(void (^)(void))completion {
     AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     if (status == AVAuthorizationStatusDenied) {
-        [self showAlertWithTitle:@"Error" message: @"Camera permissions are required for scanning QR. Please turn on Settings -> MasterpassQR Demo -> Camera"];
+        [self showAlertWithTitle:@"Error" message: @"Camera permissions are required for scanning QR. Please turn on Settings -> MPQR Demo -> Camera"];
         return;
     } else if (status == AVAuthorizationStatusRestricted) {
         [self showAlertWithTitle:@"Error" message: @"Camera permissions are restricted for scanning QR"];
@@ -212,7 +208,7 @@ __Objective-C__
                 if (granted) {
                     completion();
                 } else {
-                    [weakSelf showAlertWithTitle:@"Error" message: @"Camera permissions are required for scanning QR. Please turn on Settings -> MasterpassQR Demo -> Camera"];
+                    [weakSelf showAlertWithTitle:@"Error" message: @"Camera permissions are required for scanning QR. Please turn on Settings -> MPQR Demo -> Camera"];
                 }
             });
         }];
@@ -246,7 +242,7 @@ __Swift__
 
 ```swift
 
-import MasterpassQRScanSDK
+import MPQRScanSDK
 
 class CustomViewController : UIViewController, QRCodeReaderDelegate {
 
@@ -321,7 +317,7 @@ class CustomViewController : UIViewController, QRCodeReaderDelegate {
 __Objective-C__
 
 ```objc
-@import MasterpassQRScanSDK;
+@import MPQRScanSDK;
 
 @interface CustomViewController () <QRCodeReaderDelegate>
 
@@ -413,7 +409,7 @@ __Swift__
 
 ```swift
 import UIKit
-import MasterpassQRScanSDK
+import MPQRScanSDK
 
 class QRCodeReaderViewControllerSubClass: QRCodeReaderViewController {
 
@@ -441,7 +437,7 @@ class QRCodeReaderViewControllerSubClass: QRCodeReaderViewController {
 __Objective-C__
 
 ```objc
-#import <MasterpassQRScanSDK/MasterpassQRScanSDK.h>
+#import <MPQRScanSDK/MPQRScanSDK.h>
 
 @interface QRCodeReaderViewControllerSubClass : QRCodeReaderViewController
 @end
