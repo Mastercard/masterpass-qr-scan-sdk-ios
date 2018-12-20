@@ -1,4 +1,4 @@
-# MP QR Scan SDK
+# MPQRScanSDK
 
 This SDK provides UI components for QR scanning that allows to modify simple attributes of the views or use custom views for display.
 
@@ -31,7 +31,7 @@ This SDK is based on [QRCodeReaderViewController][1]
 
 #### Manual
 ##### Swift
-- Download the latest release of [MP QR Scan SDK][2].
+- Download the latest release of [MPQRScanSDK][2].
 - Unzip the file.
 - Go to your Xcode project’s “General” settings. Drag MPQRScanSDK.framework to the “Embedded Binaries” section. Make sure to select **Copy items if needed** and click Finish.
 - Create a new **Run Script Phase** in your app’s target’s **Build Phases** and paste the following snippet in the script text field:
@@ -472,3 +472,4 @@ __Objective-C__
 
 @end
 ```
+
